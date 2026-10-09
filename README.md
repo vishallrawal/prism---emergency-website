@@ -6,7 +6,9 @@ PRISM is a comprehensive Smart Traffic and Emergency Response application design
 
 **Live Link**: [Your Live App URL Here]
 
-*(Once deployed via Render, Vercel, or Heroku, replace the above link with your live URL)*
+*(Once deployed, replace the above link with your live URL)*
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/vishallrawal/prism---emergency-website)
 
 ## 🚀 Features
 
