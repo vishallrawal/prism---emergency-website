@@ -1,0 +1,14 @@
+PRISM development URLs
+Updated: 8/10/2026, 4:04:18 pm
+
+Backend API:      http://localhost:5000
+Backend health:   http://localhost:5000/api/health
+API docs:         http://localhost:5000/api/docs
+OpenAPI JSON:     http://localhost:5000/api/openapi.json
+Frontend:         http://localhost:5173
+Admin login:      http://localhost:5173/admin
+
+Cloudflare tunnel: https://publishers-yale-peak-polls.trycloudflare.com
+Tunnel admin:      https://publishers-yale-peak-polls.trycloudflare.com/admin
+
+This file is automatically overwritten every time you run npm run dev.
