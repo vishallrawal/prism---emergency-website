@@ -1,40 +1,75 @@
-# PRISM
+# PRISM: Smart Traffic & Emergency Response 🚦🚑
 
-Smart traffic and emergency response app for Surat, India.
+PRISM is a comprehensive Smart Traffic and Emergency Response application designed for Surat, India. It provides real-time emergency routing, blood donation services, AI-assisted safety guidance, and nearby service locators.
 
-## Stack
-- Frontend: React 18 + Vite + TomTom Maps
-- Backend: Express + MongoDB (native driver) + sessions
-- AI: Google Gemini (with offline fallback)
+## 🌟 Live Deployment
 
-## Features
-- Emergency routes, nearby hospitals/police/fire stations
-- Blood donor search and requests
-- Voice commands, live location share, AI safety assistant
-- User auth + admin dashboard
+**Live Link**: [Your Live App URL Here]
 
-## Structure
-- `frontend/` — React SPA
-- `backend/` — Express API (`/api/*`, docs at `/api/docs`)
-- `scripts/` — Cloudflare tunnel helper
+*(Once deployed via Render, Vercel, or Heroku, replace the above link with your live URL)*
 
-## Run
-```bash
-npm install
-npm --prefix backend install
-npm --prefix frontend install
-npm run dev
-```
+## 🚀 Features
 
-Frontend: http://localhost:5173
-Backend: http://localhost:5000
+- **Emergency Routes**: Real-time optimal routing for emergency vehicles using TomTom Maps.
+- **Nearby Services**: Locate nearby hospitals, police stations, and fire stations.
+- **Blood Donor Network**: Search for donors by blood group and request blood.
+- **Voice Commands**: Hands-free navigation and system interaction.
+- **AI Safety Assistant**: Offline-capable Gemini AI for emergency safety guidance.
+- **Admin Dashboard**: Comprehensive dashboard for system management.
 
-## Env (`backend/.env`)
-```
+## 🛠️ Tech Stack
+
+- **Frontend**: React 18, Vite, Tailwind CSS (assumed), TomTom Maps API
+- **Backend**: Node.js, Express.js
+- **Database**: MongoDB (Native Driver)
+- **AI Integration**: Google Gemini API
+
+## 📂 Project Structure
+
+- `frontend/` — React Single Page Application (SPA)
+- `backend/` — Express API (`/api/*`, Swagger docs available at `/api/docs`)
+- `scripts/` — Helper scripts for Cloudflare tunneling during dev
+
+## ⚙️ Local Development Setup
+
+### 1. Prerequisites
+- Node.js (v18+)
+- MongoDB (Running locally on `mongodb://127.0.0.1:27017` or a MongoDB Atlas URI)
+
+### 2. Environment Variables
+Create a `.env` file in the `backend/` directory with the following variables:
+```env
 PORT=5000
 MONGODB_URI=mongodb://127.0.0.1:27017/prism_surat
 CLIENT_ORIGIN=http://localhost:5173
-SESSION_SECRET=your_secret
-GEMINI_API_KEY=your_key
-TOMTOM_API_KEY=your_key
+SESSION_SECRET=your_secret_key
+GEMINI_API_KEY=your_gemini_api_key
+TOMTOM_API_KEY=your_tomtom_api_key
 ```
+
+### 3. Installation & Running
+From the root directory, run the following commands to install dependencies and start both frontend and backend concurrently:
+```bash
+# Install dependencies for both frontend and backend
+npm run build
+
+# Start the application concurrently
+npm run dev
+```
+
+- **Frontend**: `http://localhost:5173`
+- **Backend API**: `http://localhost:5000/api/health`
+- **API Documentation**: `http://localhost:5000/api/docs`
+
+## 📦 Deployment Guide (Render)
+
+This project is configured to be deployed as a single unified Web Service on [Render](https://render.com).
+
+1. Push this repository to your GitHub account.
+2. Go to Render Dashboard and create a new **Web Service**.
+3. Connect your GitHub repository.
+4. Settings:
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
+5. Add the Environment Variables (from your `.env`) to the Render configuration.
+6. Deploy!

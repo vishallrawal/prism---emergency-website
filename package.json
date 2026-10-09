@@ -3,14 +3,12 @@
   "version": "1.0.0",
   "description": "PRISM Smart Traffic and emergency response",
   "scripts": {
-    "start": "node server.js",
+    "start": "node backend/server.js",
+    "build": "npm install --prefix frontend && npm run build --prefix frontend && npm install --prefix backend",
     "dev": "concurrently -k -n backend,frontend,tunnel -c green,cyan,magenta \"npm run backend\" \"npm run frontend\" \"npm run tunnel\"",
     "frontend": "npm --prefix frontend run dev",
     "backend": "npm --prefix backend run dev",
-    "build": "npm --prefix frontend run build",
     "data": "npm --prefix backend run data",
-    "client": "npm --prefix frontend run dev",
-    "server": "npm --prefix backend run dev",
     "tunnel": "node scripts/start-cloudflare-tunnel.cjs"
   },
   "devDependencies": {
