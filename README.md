@@ -63,15 +63,3 @@ npm run dev
 - **Backend API**: `http://localhost:5000/api/health`
 - **API Documentation**: `http://localhost:5000/api/docs`
 
-## 📦 Deployment Guide (Render)
-
-This project is configured to be deployed as a single unified Web Service on [Render](https://render.com).
-
-1. Push this repository to your GitHub account.
-2. Go to Render Dashboard and create a new **Web Service**.
-3. Connect your GitHub repository.
-4. Settings:
-   - **Build Command**: `npm run build`
-   - **Start Command**: `npm start`
-5. Add the Environment Variables (from your `.env`) to the Render configuration.
-6. Deploy!
